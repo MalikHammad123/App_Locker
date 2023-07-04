@@ -1,0 +1,102 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigationSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/dialogue_bg">
+    >
+    <TextView
+        android:layout_marginVertical="25dp"
+        android:id="@+id/tv1"
+        android:textColor="#0F1828"
+        android:textStyle="bold"
+        android:fontFamily="@font/mulish_regular"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Takeaphotoafterwrongattemptsfor"
+        app:layout_constraintBottom_toTopOf="@id/radioGroup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onetimes" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/twotimes" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/threetimes" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fourtimes" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fivetimes" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_marginVertical="20dp"
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="@string/Cancel"
+        android:fontFamily="@font/mulish_semibold"
+        android:padding="5dp"
+        android:background="@drawable/save_bg"
+        android:textColor="#002DE3"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ok"
+        app:layout_constraintStart_toStartOf="@id/radioGroup" />
+
+    <TextView
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/lock_btn"
+        android:id="@+id/ok"
+        android:padding="5dp"
+        android:fontFamily="@font/mulish_semibold"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/radioGroup"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="@string/Ok" />
+</androidx.constraintlayout.widget.ConstraintLayout>

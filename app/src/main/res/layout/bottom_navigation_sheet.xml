@@ -1,0 +1,111 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNavigationSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialogue_bg">
+>
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/tv1"
+        android:textColor="#0F1828"
+        android:textStyle="bold"
+        android:fontFamily="@font/mulish_regular"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Security Question"
+        app:layout_constraintBottom_toTopOf="@id/tv2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:layout_marginTop="25dp"
+
+        android:id="@+id/tv2"
+        android:textColor="#ADB5BD"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help to rest your password"
+        app:layout_constraintBottom_toTopOf="@id/questionSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/><!-- Security Question Spinner -->
+    <Spinner
+        android:layout_marginTop="25dp"
+        android:id="@+id/questionSpinner"
+        android:layout_width="match_parent"
+        android:outlineSpotShadowColor="@color/teal_700"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        android:background="@drawable/questions_bg"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintBottom_toTopOf="@id/cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+  <!-- Security Answer EditText -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        android:layout_marginVertical="15dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionSpinner">
+        <EditText
+            android:id="@+id/answerEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Answer"
+            android:background="#EDEDED"
+            android:textColor="#0F1828"
+            android:textSize="14sp"
+            android:paddingHorizontal="10dp"
+            android:textColorHint="#ADB5BD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_marginVertical="20dp"
+        android:id="@+id/setQuestions"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.12"
+        android:text="Save Answers"
+        android:fontFamily="@font/mulish_semibold"
+        android:padding="5dp"
+        android:background="@drawable/save_bg"
+        android:textColor="#002DE3"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verifyQuestions"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/lock_btn"
+        android:id="@+id/verifyQuestions"
+        android:padding="5dp"
+        android:fontFamily="@font/mulish_semibold"
+        android:textColor="@color/white"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/setQuestions"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.12"
+        android:text="Verify Answers" />
+</androidx.constraintlayout.widget.ConstraintLayout>

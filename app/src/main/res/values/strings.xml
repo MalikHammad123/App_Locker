@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">App_Locker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="password_type">Password Type</string>
+    <string name="pattern_pin">Pattern , PIN</string>
+    <string name="hide_Pattern">Hide Pattern</string>
+    <string name="hide_pattern_draw_path">Hide pattern draw path</string>
+    <string name="fingerprint_unlock">Fingerprint Unlock</string>
+    <string name="vault_unlock_with_fingerprint">Vault unlock with fingerprint</string>
+    <string name="change_password">Change Password</string>
+    <string name="security_question">Security Question </string>
+    <string name="set_security_answer">Set security answer</string>
+
+    <string name="Share">Share</string>
+    <string name="share_with_your_friends">Share with your friends</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="give_yourfeedback">Give your feedback</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    ///////////////////////////biometric////////////////////////////////////////////
+    <string name="title_biometric_dialog">Biometrics</string>
+    <string name="text_description_biometrics_dialog">Use biometrics to continue.</string>
+    <string name="text_negative_button_biometric_dialog">Use other way</string>
+    <string name="message_success">Successssssss</string>
+    <string name="message_no_support_biometrics">Device not support Biometrics</string>
+    <string name="message_no_hardware_available">No Hardware available</string>
+
+    <string name="error_hw_unavailable">The hardware is unavailable. Try again later.</string>
+    <string name="error_unable_to_process">The sensor was unable to process the current image.</string>
+    <string name="error_time_out">The current operation has been running too long and has timed out.</string>
+    <string name="error_no_space">The operation can\'t be completed because there is not enough device storage remaining.</string>
+    <string name="error_canceled">The operation was canceled by the user or because the biometric sensor is unavailable.</string>
+    <string name="error_lockout">The operation was canceled because the biometrics is locked out due to too many attempts. This occurs after 5 failed attempts, and lasts for 30 seconds.</string>
+    <string name="error_vendor">The operation failed due to a vendor-specific error.</string>
+    <string name="error_lockout_permanent">Wrong biometrics too many times. Use device credential to unlock.</string>
+    <string name="error_user_canceled">The user canceled the operation.</string>
+    <string name="error_no_biometrics">The Device does not have any biometrics enrolled.</string>
+    <string name="error_hw_not_present">The device does not have the required authentication hardware.</string>
+    <string name="error_no_device_credentials">The device does not have pin, pattern, or password set up.</string>
+    <string name="error_security_update_required">A security vulnerability has been discovered with one or more hardware sensors. The affected sensor(s) are unavailable until a security update has addressed the issue.</string>
+    <string name="error_unknown">Unknown error.</string>
+    <string name="message_user_app_authentication">Denied for Biometrics</string>
+    <string name="text_unlock">Unlock</string>
+    <string name="message_set_up_pattern">Set up PIN/Pattern/Password.</string>
+    <string name="title_device_lock">Device Lock</string>
+    <string name="title_set_up_device_lock">Set up Device lock.</string>
+
+
+    <string name="intruder_record">Intruder record</string>
+    <string name="takephotoofintruder">Take photos of intruders if enter wrong \npassword.</string>
+    <string name="take_photo_after_wrong_attempts">Take a photo after wrong attempts \nfor</string>
+    <string name="Areyousureyouwanttodeletethislog">Are you sure you want to \ndelete this log?</string>
+
+    /////////////////////////////////VIP//////////////////////////////
+    <string name="GetPremium">Get Premium</string>
+    <string name="Accesstoallthepremiumfeatures">Access to all the premium features</string>
+    <string name="Unlockall50themes">Unlock all 50+ themes</string>
+    <string name="Getaccesssecretvault">Get access secret vault</string>
+    <string name="advancedintruderdetection">Advanced intruder detection</string>
+    <string name="adsfreeexperience">Ads free experience</string>
+    <string name="tryforFREE">Try for FREE</string>
+    <string name="CONTINUE">CONTINUE</string>
+    <string name="rs499">Rs 499/Mo</string>
+    <string name="rs375">Rs 375/Mo</string>
+    <string name="Monthly">Monthly</string>
+    <string name="Annual">Annual</string>
+    <string name="Delete">Delete</string>
+    <string name="Lifetime">Lifetime</string>
+    <string name="RECOMMEND">RECOMMEND</string>
+    <string name="Rs7229">Rs 7,229</string>
+    <string name="Rs499">Rs 499</string>
+    <string name="Rs4500">Rs 4,500</string>
+    <string name="Rs3649">Rs 3,649</string>
+    <string name="Save50">Save 50%</string>
+    <string name="Create4DigitPIN">Create 4-Digit PIN</string>
+    <string name="Confrm4DigitPIN">Confirm 4-Digit PIN</string>
+    <string name="EnterSavedPassword">Enter Already Saved Password</string>
+    <string name="Dayfreetrail">7-Day free trail</string>
+    <string name="Recurringbillingcancelanytime">Recurring billing cancel any time</string>
+    <string name="AppLocker">App Locker</string>
+    <string name="TakeControlLockYourApps">Take Control, Lock Your Apps</string>
+    <string name="poweredby">powered by</string>
+    <string name="XILLIAPPS">XILLI APPS</string>
+    <string name="ForgetPassword">Forget Password?</string>
+    <string name="Ok">Ok</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Takeaphotoafterwrongattemptsfor">Take a photo after wrong attempts\nfor</string>
+    <string name="onetimes">1 times</string>
+    <string name="twotimes">2 times</string>
+    <string name="threetimes">3 times</string>
+    <string name="fourtimes">4 times</string>
+    <string name="fivetimes">5 times</string>
+    <string name="paragraph">Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.
+    ////////////////////////////splash////////////////////////
+
+
+    </string>
+    <string name="apply">APPLY</string>
+
+
+</resources>

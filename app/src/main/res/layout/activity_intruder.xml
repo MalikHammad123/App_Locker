@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EDEDED"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/nophoto_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/intruder_iv1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:id="@+id/material_tb"
+            android:background="#002DE3"
+            app:menu="@menu/intruder_detection_menu"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/back_arrow"
+            app:title="Intruder Detection" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/framef1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F7F7FC"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+        android:id="@+id/intruder_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/intruder_ic"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintBottom_toBottomOf="@id/framef1"
+        app:layout_constraintStart_toStartOf="@id/framef1"
+        app:layout_constraintTop_toTopOf="@id/framef1"
+        app:layout_constraintWidth_percent="0.1"></ImageView>
+    <TextView
+        android:id="@+id/intruder_tv1"
+        style="@style/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/mulish_bold"
+        android:text="@string/intruder_record"
+        app:layout_constraintBottom_toTopOf="@+id/intruder_tv2"
+        app:layout_constraintStart_toEndOf="@+id/intruder_iv"
+        app:layout_constraintTop_toTopOf="@id/intruder_iv" />
+    <TextView
+        android:id="@+id/intruder_tv2"
+        style="@style/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/mulish_regular"
+        android:text="@string/take_photo_after_wrong_attempts"
+        app:layout_constraintBottom_toBottomOf="@+id/intruder_iv"
+        app:layout_constraintStart_toEndOf="@+id/intruder_iv"
+        app:layout_constraintTop_toBottomOf="@id/intruder_tv1" />
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/intruder_sv"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/intruder_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="@id/intruder_iv"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/intruder_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/framef1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

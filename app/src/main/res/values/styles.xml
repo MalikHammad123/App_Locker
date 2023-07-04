@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="line1">
+        <!-- Define the attributes for the TextView -->
+        <item name="android:textColor">#0F1828</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Add more attributes as needed -->
+    </style>
+
+
+    <style name="line2">
+        <!-- Define the attributes for the TextView -->
+        <item name="android:textColor">#A4A4A4</item>
+        <item name="android:textSize">10sp</item>
+        <!-- Add more attributes as needed -->
+    </style>
+
+
+
+
+</resources>

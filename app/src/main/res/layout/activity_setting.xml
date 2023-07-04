@@ -1,0 +1,589 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    android:clickable="false"
+    android:layout_width="match_parent">
+    <com.google.android.material.appbar.MaterialToolbar
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:id="@+id/material_tb"
+        android:background="#002DE3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/back_arrow"
+        app:title="Setting" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="15dp"
+        android:elevation="14dp"
+        android:padding="6dp"
+        android:id="@+id/cardviewtop"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/material_tb">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/setting_bg"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/framef0"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <ImageView
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintWidth_percent="0.1"
+                app:layout_constraintHeight_percent="1"
+                android:id="@+id/vip_iv"
+                android:src="@drawable/vip"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/vip_tv1"
+                style="@style/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="Join VIP"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/vip_iv"
+                app:layout_constraintStart_toEndOf="@+id/vip_iv"
+                app:layout_constraintTop_toTopOf="@id/vip_iv" />
+            <ImageView
+                android:id="@+id/vip_iv2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/next_icon"
+                app:layout_constraintBottom_toBottomOf="@id/vip_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintTop_toTopOf="@id/vip_iv"
+                app:layout_constraintWidth_percent="0.06" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@id/cardviewtop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Security"
+                android:textSize="15sp"
+                android:textColor="#A4A4A4"
+                android:fontFamily="@font/mulish_semibold"
+                android:textStyle="normal" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:elevation="14dp"
+                android:padding="6dp"
+                app:cardCornerRadius="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <FrameLayout
+                        android:id="@+id/framef1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/passwordtype_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/password_type"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.1"/>
+                    <TextView
+                        android:id="@+id/passwordtype_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/password_type"
+                        app:layout_constraintBottom_toTopOf="@+id/passwordtype_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/passwordtype_iv"
+                        app:layout_constraintTop_toTopOf="@id/passwordtype_iv" />
+                    <TextView
+                        android:id="@+id/passwordtype_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/pattern_pin"
+                        app:layout_constraintBottom_toBottomOf="@+id/passwordtype_iv"
+                        app:layout_constraintStart_toEndOf="@+id/passwordtype_iv"
+                        app:layout_constraintTop_toBottomOf="@id/passwordtype_tv1" />
+                    <TextView
+                        android:id="@+id/passwordtype_tv3"
+                        style="@style/line2"
+                        android:layout_width="100dp"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:fontFamily="@font/mulish_semibold"
+                        android:text="Pattern"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/passwordtype_iv"
+                        app:layout_constraintEnd_toStartOf="@+id/passwordtype_iv2"
+                        app:layout_constraintTop_toTopOf="@id/passwordtype_iv" />
+                    <ImageView
+                        android:id="@+id/passwordtype_iv2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/passwordtype_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintTop_toTopOf="@id/passwordtype_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+
+
+                    <View
+                        app:layout_constraintTop_toBottomOf="@id/framef1"
+                        app:layout_constraintBottom_toTopOf="@id/framef2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/framef2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toBottomOf="@id/framef1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/hidepattern_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/hide_password"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/passwordtype_iv"
+                        app:layout_constraintWidth_percent="0.1" />
+                    <TextView
+                        android:id="@+id/hidepattern_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/hide_Pattern"
+                        app:layout_constraintBottom_toTopOf="@+id/hidepattern_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/hidepattern_iv"
+                        app:layout_constraintTop_toTopOf="@+id/hidepattern_iv" />
+                    <TextView
+                        android:id="@+id/hidepattern_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/hide_pattern_draw_path"
+                        app:layout_constraintBottom_toBottomOf="@id/hidepattern_iv"
+                        app:layout_constraintStart_toEndOf="@+id/hidepattern_iv"
+                        app:layout_constraintTop_toBottomOf="@id/hidepattern_tv1" />
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/hidepattern_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toTopOf="@id/hidepattern_iv" />
+
+                    <FrameLayout
+                        android:id="@+id/framef3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/framef2" />
+
+                    <ImageView
+                        android:id="@+id/fingerprint_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/fingerprint"
+                        app:layout_constraintWidth_percent="0.1"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/hidepattern_iv"
+                         />
+                    <TextView
+                        android:id="@+id/fingerprint_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/fingerprint_unlock"
+                        app:layout_constraintBottom_toTopOf="@id/fingerprint_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/fingerprint_iv"
+                        app:layout_constraintTop_toTopOf="@+id/fingerprint_iv" />
+                    <TextView
+                        android:id="@+id/fingerprint_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/vault_unlock_with_fingerprint"
+                        app:layout_constraintBottom_toBottomOf="@id/fingerprint_iv"
+                        app:layout_constraintStart_toEndOf="@+id/fingerprint_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/fingerprint_tv1" />
+                    <Switch
+                        android:id="@+id/fingerprint_sv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/fingerprint_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toTopOf="@id/fingerprint_iv" />
+
+                    <FrameLayout
+                        android:id="@+id/framef4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toBottomOf="@id/framef3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/changepassword_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/change_password"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fingerprint_iv"
+                        app:layout_constraintWidth_percent="0.1" />
+                    <TextView
+                        android:id="@+id/changepassword_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/change_password"
+                        app:layout_constraintBottom_toTopOf="@id/changepassword_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/changepassword_iv"
+                        app:layout_constraintTop_toTopOf="@+id/changepassword_iv" />
+                    <TextView
+                        android:id="@+id/changepassword_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/change_password"
+                        app:layout_constraintBottom_toBottomOf="@id/changepassword_iv"
+                        app:layout_constraintStart_toEndOf="@+id/changepassword_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/changepassword_tv1" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/changepassword_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintTop_toTopOf="@id/changepassword_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+                    <FrameLayout
+                        android:id="@+id/framef5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintTop_toBottomOf="@id/framef4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/securityquestion_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/security_question"
+                        app:layout_constraintHeight_percent="0.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/changepassword_iv"
+                        app:layout_constraintWidth_percent="0.1" />
+
+                    <TextView
+                        android:id="@+id/securityquestion_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/security_question"
+                        app:layout_constraintBottom_toTopOf="@id/securityquestion_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/securityquestion_iv"
+                        app:layout_constraintTop_toTopOf="@+id/securityquestion_iv" />
+
+                    <TextView
+                        android:id="@+id/securityquestion_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/set_security_answer"
+                        app:layout_constraintBottom_toBottomOf="@id/securityquestion_iv"
+                        app:layout_constraintStart_toEndOf="@+id/securityquestion_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/securityquestion_tv1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/securityquestion_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintTop_toTopOf="@id/securityquestion_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Other"
+                android:textColor="#A4A4A4"
+                android:fontFamily="@font/mulish_semibold"
+                android:textStyle="normal"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:elevation="14dp"
+                android:padding="6dp"
+                app:cardCornerRadius="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/framef6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/share_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/share"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.1"></ImageView>
+                    <TextView
+                        android:id="@+id/share_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/Share"
+                        app:layout_constraintBottom_toTopOf="@+id/share_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/share_iv"
+                        app:layout_constraintTop_toTopOf="@id/share_iv" />
+                    <TextView
+                        android:id="@+id/share_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/share_with_your_friends"
+                        app:layout_constraintBottom_toBottomOf="@+id/share_iv"
+                        app:layout_constraintStart_toEndOf="@+id/share_iv"
+                        app:layout_constraintTop_toBottomOf="@id/share_tv1" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/share_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintTop_toTopOf="@id/share_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+                    <FrameLayout
+                        android:id="@+id/framef7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/framef6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/rateus_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/rate_us"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/share_iv"
+                        app:layout_constraintWidth_percent="0.1" />
+                    <TextView
+                        android:id="@+id/rateus_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/rate_us"
+                        app:layout_constraintBottom_toTopOf="@+id/rateus_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/rateus_iv"
+                        app:layout_constraintTop_toTopOf="@+id/rateus_iv" />
+                    <TextView
+                        android:id="@+id/rateus_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/give_yourfeedback"
+                        app:layout_constraintBottom_toBottomOf="@id/rateus_iv"
+                        app:layout_constraintStart_toEndOf="@+id/rateus_iv"
+                        app:layout_constraintTop_toBottomOf="@id/rateus_tv1" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/rateus_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintTop_toTopOf="@id/rateus_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+                    <FrameLayout
+                        android:id="@+id/framef8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/framef7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <ImageView
+                        android:id="@+id/privacypolicy_iv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/privacy_policy"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rateus_iv"
+                        app:layout_constraintWidth_percent="0.1" />
+
+                    <TextView
+                        android:id="@+id/privacypolicy_tv1"
+                        style="@style/line1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_bold"
+                        android:text="@string/PrivacyPolicy"
+                        app:layout_constraintBottom_toTopOf="@id/privacypolicy_tv2"
+                        app:layout_constraintStart_toEndOf="@+id/privacypolicy_iv"
+                        app:layout_constraintTop_toTopOf="@+id/privacypolicy_iv" />
+
+                    <TextView
+                        android:id="@+id/privacypolicy_tv2"
+                        style="@style/line2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/mulish_regular"
+                        android:text="@string/privacy_policy"
+                        app:layout_constraintBottom_toBottomOf="@id/privacypolicy_iv"
+                        app:layout_constraintStart_toEndOf="@+id/privacypolicy_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/privacypolicy_tv1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:src="@drawable/right_arrow"
+                        app:layout_constraintBottom_toBottomOf="@id/privacypolicy_iv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintTop_toTopOf="@id/privacypolicy_iv"
+                        app:layout_constraintWidth_percent="0.02" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

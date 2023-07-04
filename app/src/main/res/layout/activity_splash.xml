@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splash_icon"
+        app:layout_constraintBottom_toTopOf="@+id/tv1"
+        app:layout_constraintStart_toStartOf="@+id/tv1"
+        app:layout_constraintEnd_toEndOf="@+id/tv1"/>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AppLocker"
+            android:textSize="24sp"
+            android:layout_marginVertical="5dp"
+            android:textColor="#002DE3"
+            android:fontFamily="@font/mulish_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TakeControlLockYourApps"
+            android:textSize="14sp"
+            android:textColor="#A4A4A4"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/mulish_regular"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:layout_constraintStart_toStartOf="@id/tv1"
+            app:layout_constraintEnd_toEndOf="@id/tv1"/>
+
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        app:layout_constraintBottom_toTopOf="@+id/tv3"
+        app:layout_constraintEnd_toEndOf="@+id/tv3"
+        app:layout_constraintStart_toStartOf="@+id/tv3"
+        android:id="@+id/animationView"
+        android:layout_marginVertical="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/animation"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_marginVertical="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/poweredby"
+        android:textSize="10sp"
+        android:textColor="#002DE3"
+        android:fontFamily="@font/mulish_regular"
+        app:layout_constraintBottom_toTopOf="@id/tv4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_marginVertical="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/XILLIAPPS"
+        android:textSize="14sp"
+        android:textColor="#002DE3"
+        android:fontFamily="@font/mulish_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
